@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Incident</title>
+    <link rel="stylesheet" href="reportIncident.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+   <div class="container">
+            <h2>REPORT AN INCIDENT</h2>
+                
+        <form action="" method="POST" enctype="multipart/form-data">
+            <!-- Incident Details -->
+            <label for="incident-date">Date of Incident <span class="required">*</span></label>
+            <input type="date" id="incident-date" name="incident_date" required>
+
+            <label for="location">Location of Incident <span class="required">*</span></label>
+            <input type="text" id="location" name="location" placeholder="City, Town, or Area" required>
+
+            <label for="incident-type">Type of Incident <span class="required">*</span></label>
+            <select id="incident-type" name="incident_type" required>
+                <option value="">-- Select --</option>
+                <option value="physical_violence">Physical Violence</option>
+                <option value="sexual_violence">Sexual Violence</option>
+                <option value="threats_harassment">Threats or Harassment</option>
+                <option value="femicide">Femicide</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="description">Description of Incident <span class="required">*</span></label>
+            <textarea id="description" name="description" rows="4" placeholder="Provide detailed information" required></textarea>
+
+            <!-- Victim Information -->
+            <label for="victim-name">Name of Victim<span class="required">*</span></label>
+            <input type="text" id="victim-name" name="victim_name" placeholder="Enter victim's name">
+
+            <label for="victim-age">Age of Victim <span class="required">*</span></label>
+            <input type="number" id="victim-age" name="victim_age" required>
+
+            <label for="relationship">Relationship to Victim <span class="required">*</span></label>
+            <select id="relationship" name="relationship" required>
+                <option value="">-- Select --</option>
+                <option value="family">Family Member</option>
+                <option value="partner">Partner/Ex-Partner</option>
+                <option value="stranger">Stranger</option>
+                <option value="acquaintance">Acquaintance/Colleague</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Evidence Submission -->
+            <label for="evidence">Attach Evidence (Optional)</label>
+            <input type="file" id="evidence" name="evidence">
+
+            <!-- Reporter Information -->
+            <label for="reporter-name">Your Name (Optional)</label>
+            <input type="text" id="reporter-name" name="reporter_name" placeholder="Enter your name">
+
+            <label for="contact">Your Contact Information (Optional)</label>
+            <input type="text" id="contact" name="contact" placeholder="Email or phone number">
+
+            <!-- Consent -->
+            
+          
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">I agree to the terms and conditions and understand this report will be handled confidentially.</label>
+                    
+            <!-- Submit -->
+            <button type="submit">Submit Report</button>
+        </form>
+        <p class="note">Fields marked with <span class="required">*</span> are required.</p>
+    </div>
+</body>
+</html>
