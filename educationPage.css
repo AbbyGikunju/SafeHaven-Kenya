@@ -1,0 +1,455 @@
+body {
+    margin: 0;
+    font-family: "Source Sans 3", serif;
+    padding: 0;
+    height: 100%;
+}
+
+
+/* banner and text */
+.banner {
+    position: relative;
+    background: url('images/pics3.avif') ;
+    height: 90vh; /* Adjust as needed */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.banner-content {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    height: 100%; /* Full height of the banner */
+    text-align: center;
+    width: 100%; /* Make sure it spans full width */
+}
+
+.banner-content h1{
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+.banner-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+}
+/*.banner-content h3, .banner-content p {
+    align-self: flex-start; /* Align to the left 
+    text-align: left;  Left-align text 
+    margin-left: 20px; /* Adds margin from the left edge 
+}*/
+
+.banner-content p {
+    font-family: "Open Sans", serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: 20px; /* Adds margin from the left edge */
+    color: white;
+}
+
+.statistics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.statistics {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px); /* Two cards per row with gap */
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    color: #e61d3f;
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+.stat-item {
+    margin: 20px 0;
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+    color: #5b2c6f;
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #e61d3f;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.chart-container {
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center; /* Center the chart and its title */
+}
+
+.chart-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e61d3f;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+canvas {
+    height: 400px !important;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .statistics {
+        flex: 1 1 100%; /* Stack cards vertically on smaller screens */
+    }
+}
+
+
+
+/* Mental Health Articles Section */
+.mental-health-articles {
+    padding: 40px;
+    color: black;
+}
+
+.mental-health-articles h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.article-item {
+    background-color: 	#faf2f3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.article-item:hover {
+    transform: translateY(-10px);
+}
+
+.article-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-item h3 {
+    font-size: 1.5rem;
+    margin: 15px;
+}
+
+.article-item p {
+    font-size: 1rem;
+    margin: 0 15px 15px;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 15px 15px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+
+/*SCROLLL MENTAL RESOURCE VIDEOS*/
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 16px;
+}
+h1 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+/* Scroll container with horizontal scrolling */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 16px;
+    flex-grow: 1;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Ensure it stays behind the buttons */
+}
+
+.card {
+    flex: 0 0 300px; /* Fixed card width */
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+}
+.video-description{
+    text-align: start;
+    font-weight: bold;
+}
+
+/* Arrow buttons */
+.scroll-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 8px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    z-index: 2; /* Ensure buttons are above the scrollable container */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+}
+
+.scroll-button:hover {
+    background-color: #0056b3;
+}
+
+.scroll-button.left {
+    left: 8px;
+}
+
+.scroll-button.right {
+    right: 8px;
+}
+
+/* Hide horizontal scrollbar */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+h2 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+}
+
+
+/*ORGANISATION AND LEGAL AID*/
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #f5f4f6;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    /*border-radius: 50%;*/
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5em; /* Relative to parent size */
+    color: #cc8084;
+    padding: 5px;
+}
+
+
+/* Testimonial Slider Styles */
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    height: 100px; /* Adjust as needed */
+}
+.testimonial {
+    display: none;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+    font-size: 1.5em;
+    padding: 20px;
+}
+.testimonial.active {
+    display: block;
+    animation: fade-in 1s ease-in-out;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Dots/Indicators Styles */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #cc8084 ;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-category {
+    margin-bottom: 30px;
+}
+
+.faq-category h3 {
+    color: #e61d3f;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e61d3f;
+    padding-bottom: 5px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #e4d5d6 ;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e3dddd;
+}
+
+.faq-answer {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: none; /* Hidden by default */
+}
+
+.faq-answer.active {
+    display: block; /* Show when active */
+}
