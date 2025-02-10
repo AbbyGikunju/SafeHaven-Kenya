@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Femicide in Kenya</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+  <!-- Icon CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  
+  <!-- Animation Library (Animate.css) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="about-page">
+  
+  <!-- Navbar (linking to index.html) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f8f5ee;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">SafeHavenKenya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section d-flex justify-content-center align-items-center" style="background-color: #e61d3f; height: 100vh;">
+    <div class="container text-center text-white">
+      <h1 class="animate__animated animate__fadeIn animate__delay-1s">Femicide in Kenya: A Cry for Justice</h1>
+      <p class="lead animate__animated animate__fadeIn animate__delay-2s">Addressing the growing problem of femicide and gender-based violence in Kenya.</p>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-section py-5">
+    <div class="container animate__animated animate__fadeIn animate__delay-3s">
+      <h2 class="text-center mb-4">Understanding the Impact of Femicide</h2>
+      <p class="text-center mb-5">
+        Femicide is not just a statistic; it’s a crisis affecting women across Kenya. In this section, we highlight the alarming statistics from 2024.
+      </p>
+
+      <section class="stats-section py-5">
+        <div class="container text-center animate__animated animate__fadeIn animate__delay-3s">
+            <h2 class="mb-4">2024 Femicide Statistics in Kenya</h2>
+            <p class="lead mb-5">
+                The following statistics highlight the grave situation of femicide in Kenya, a problem that demands attention and action.
+            </p>
+    
+            <!-- Cards for Statistics -->
+            <div class="row justify-content-center">
+                
+                <!-- Card 1: Total Incidents -->
+                <div class="col-md-3 mb-4">
+                    <div class="card stats-card shadow-lg p-4" style="background-color: #e61d3f; color: white;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fas fa-female fa-3x"></i>
+                            <h3 id="total-incidents">0</h3> <!-- Unique ID for Total Incidents counter -->
+                        </div>
+                        <h5 class="text-center">Total Incidents</h5>
+                        <p class="text-center">Femicide cases reported in Kenya for the year 2024.</p>
+                    </div>
+                </div> <!-- End of Card 1 -->
+    
+                <!-- Card 2: Urban Cases -->
+                <div class="col-md-3 mb-4">
+                    <div class="card stats-card shadow-lg p-4" style="background-color: #f8f5ee; color: black;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fas fa-city fa-3x"></i>
+                            <h3 id="urban-cases">0</h3> <!-- Unique ID for Urban Cases counter -->
+                        </div>
+                        <h5 class="text-center">Urban Cases</h5>
+                        <p class="text-center">Incidents of femicide that occurred in urban areas of Kenya.</p>
+                    </div>
+                </div> <!-- End of Card 2 -->
+    
+                <!-- Card 3: Rural Cases -->
+                <div class="col-md-3 mb-4">
+                    <div class="card stats-card shadow-lg p-4" style="background-color: #f8f5ee; color: black;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fas fa-map-marker-alt fa-3x"></i>
+                            <h3 id="rural-cases">0</h3> <!-- Unique ID for Rural Cases counter -->
+                        </div>
+                        <h5 class="text-center">Rural Cases</h5>
+                        <p class="text-center">Femicide cases reported from rural areas in Kenya.</p>
+                    </div>
+                </div> <!-- End of Card 3 -->
+    
+                <!-- Card 4: Conviction Rate -->
+                <div class="col-md-3 mb-4">
+                    <div class="card stats-card shadow-lg p-4" style="background-color: #e61d3f; color: white;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <i class="fas fa-council-chamber fa-3x"></i>
+                            <h3 id="conviction-rate">0</h3> <!-- Unique ID for Conviction Rate counter -->
+                        </div>
+                        <h5 class="text-center">Conviction Rate</h5>
+                        <p class="text-center">Percentage of femicide cases that have led to convictions.</p>
+                    </div>
+                </div> <!-- End of Card 4 -->
+    
+            </div> <!-- End of Cards Row -->
+        </div>
+    </section>
+    
+      <!-- Compassionate Call to Action -->
+      <div class="text-center">
+        <p class="animate__animated animate__fadeIn animate__delay-4s">Every number represents a life taken, a future stolen. It’s time for change.</p>
+        <p class="mb-5 animate__animated animate__fadeIn animate__delay-5s">
+          Join us in raising awareness and fighting for justice.
+        </p>
+        <a href="index.html" class="btn btn-danger px-4 py-2 animate__animated animate__zoomIn">Join the Fight Against Femicide</a>
+      </div>
+
+      <!-- Awareness Section -->
+      <div class="row mt-5">
+        <div class="col-md-6 animate__animated animate__slideInLeft">
+          <h3>What is Femicide?</h3>
+          <p>Femicide is the killing of women based on their gender. It represents the extreme violence that women face due to inequality and the patriarchy in Kenyan society. Often, femicide victims are murdered by intimate partners or family members.</p>
+        </div>
+        <div class="col-md-6 animate__animated animate__slideInRight">
+          <h3>Why Address Femicide?</h3>
+          <p>Femicide is not an isolated issue. It’s a systemic problem rooted in deeply embedded social norms. Understanding femicide allows us to address gender-based violence on a broader scale, ensuring that women can live free from fear and violence in every corner of Kenya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4" style="background-color: #f8f5ee;">
+    <div class="container text-center">
+      <p>&copy; 2025 SafeHaven Kenya. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS & Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

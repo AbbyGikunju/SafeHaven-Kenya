@@ -1,0 +1,150 @@
+/* about.css */
+
+.about-page {
+    background-color: #f8f5ee;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding-top: 80px; /* Added padding to offset the fixed navbar */
+  }
+  
+  .navbar {
+    background-color: #f8f5ee;
+    padding: 20px;
+  }
+  
+  .navbar-brand {
+    color: #e61d3f !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: black !important;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #e61d3f !important;
+  }
+  
+  .hero-section {
+    background-color: #e61d3f;
+    height: 100vh;
+    color: white;
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    animation-duration: 1s;
+  }
+  
+  .hero-section p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  
+  .about-section {
+    background-color: #ffffff;
+    padding: 60px 0;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+/* Stats Section */
+.stats-section {
+    background-color: #ffffff;
+    padding-top: 60px;
+}
+
+.stats-card {
+    background-color: #ffffff;
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.stats-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.stats-card i {
+    color: #e61d3f;
+}
+
+.stats-card h5 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.stats-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Cards Layout */
+.stats-section .row {
+    display: flex;
+    justify-content: center;
+}
+
+.stats-section .col-md-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.stats-section .card-body {
+    padding: 20px;
+}
+
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animate__fadeIn {
+    animation: fadeIn 1.5s ease-in;
+  }
+  
+  .animate__delay-3s {
+    animation-delay: 3s;
+  }
+  .btn-danger {
+    background-color: #e61d3f;
+    border: none;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #d1162e;
+  }
+  
+  .footer {
+    background-color: #f8f5ee;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .footer p {
+    margin-bottom: 0;
+  }
+  
